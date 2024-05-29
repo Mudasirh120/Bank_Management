@@ -1,9 +1,9 @@
 public class Saving extends AccountType {
     double transactionLimit() {
-        return 0;
+        return 500000;
     }
     double calculateInterest() {
-        return 0;
+        return 0.15;
     }
 }
 

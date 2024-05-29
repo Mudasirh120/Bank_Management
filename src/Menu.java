@@ -23,6 +23,9 @@ public class Menu {
             case 2 :
               ResetPin.changePin();
               break;
+            case 3:
+              AccountType.AccountType();
+              break;
             case 8 :
               Login.loginPage();
               break;
