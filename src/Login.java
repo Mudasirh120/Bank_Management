@@ -1,25 +1,54 @@
-import com.sun.jdi.PathSearchingVirtualMachine;
-
 import java.util.Scanner;
+import java.util.Random;
 public class Login {
+    private static String accountNumber;
+    private static String branchCode="0246";
     private static String username;
     private static String password;
     private static String storedUsername;
     private static String storedPassword;
     private static String recoverykey;
     private static int pin;
+    public static void setUsername(String username) {
+        Login.username = username;
+    }
+    public static String getUsername() {
+        return username;
+    }
+    public static String getRecoverykey() {
+        return recoverykey;
+    }
+    public static void setRecoverykey(String recoverykey) {
+        Login.recoverykey = recoverykey;
+    }
+    public static int getPin() {
+        return pin;
+    }
+    public static void setPin(int pin) {
+        Login.pin = pin;
+    }
+    public static String getStoredPassword() {
+        return storedPassword;
+    }
+    public static void setStoredPassword(String storedPassword) {
+        Login.storedPassword = storedPassword;
+    }
+
     private static boolean loggedIn = false;
     private static int choice;
     public static void register(){
+        Random rand = new Random();
         Scanner scanner = new Scanner(System.in);
         System.out.print("\t\t\t\t\t\t\t  Username: ");
         storedUsername = scanner.nextLine();
         System.out.print("\t\t\t\t\t\t\t  Password: ");
         storedPassword = scanner.nextLine();
-        System.out.print("\t\t\t\t\t\t\t  Recoveey key : ");
+        System.out.print("\t\t\t\t\t\t\t  Recovery key : ");
         recoverykey= scanner.nextLine();
-        System.out.print("\t\t\t\t\t\t\t  Tramsaction Pin: ");
+        System.out.print("\t\t\t\t\t\t\t  Transaction Pin: ");
         pin = scanner.nextInt();
+        long acNumber= rand.nextLong(100000000);
+        accountNumber=branchCode+acNumber;
         System.out.println("\n\n\t\t\t\t\t\t\t Successful Signup.");
         login();
     }
@@ -102,11 +131,9 @@ public class Login {
         break;
         case 2:
             register();
-
-
             break;
-            default:
-                System.out.println("\n\n\t\t\t\t\tInvalid choice. Please choose 1 or 2.");
-                break;        }
+        default:
+            System.out.println("\n\n\t\t\t\t\tInvalid choice. Please choose 1 or 2.");
+            break;        }
         }
     }

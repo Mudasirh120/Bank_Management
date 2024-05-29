@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class Menu {
     public static void displayMenu(){
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome ");
         System.out.println("Choose what to do ");
         System.out.println("1. View Details");
@@ -10,5 +13,12 @@ public class Menu {
         System.out.println("6. Withdraw Cash ");
         System.out.println("7. Check Balance ");
         System.out.println("8. Logout");
+        System.out.println("Make a Choice :");
+        int mchoice;
+        mchoice=scanner.nextInt();
+        switch (mchoice){
+            case 1 :
+
+        }
     }
 }
