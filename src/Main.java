@@ -3,7 +3,7 @@ public class Main {
        Login.loginPage();
 
         //SavingAccount savingAccount = new SavingAccount("SA123", "Alice", 1000.0, 5.0);
-        //1CurrentAccount currentAccount = new CurrentAccount("CA123", "Bob", 500.0, 1000.0);
+        //11CurrentAccount currentAccount = new CurrentAccount("CA123", "Bob", 500.0, 1000.0);
     }
 }
 

@@ -7,8 +7,8 @@ public class Menu {
         System.out.println("Choose what to do ");
         System.out.println("1. View Details");
         System.out.println("2. Reset Pin");
-        System.out.println("3. Upgrade Card");
-        System.out.println("4. Change Account Type");
+        System.out.println("3. Change Account Type");
+        System.out.println("4. Upgrade Card");
         System.out.println("5. Deposit Cash");
         System.out.println("6. Withdraw Cash ");
         System.out.println("7. Check Balance ");
@@ -26,6 +26,10 @@ public class Menu {
             case 8 :
               Login.loginPage();
               break;
+            default:
+                System.out.println("Invalid Input");
+                displayMenu();
+                break;
         }
     }
 }
