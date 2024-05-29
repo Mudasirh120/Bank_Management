@@ -14,9 +14,9 @@ public class Menu {
         System.out.println("7. Check Balance ");
         System.out.println("8. Logout");
         System.out.println("Make a Choice :");
-        int mchoice;
-        mchoice=scanner.nextInt();
-        switch (mchoice){
+        int mychoice;
+        mychoice=scanner.nextInt();
+        switch (mychoice){
             case 1 :
                Account.displayAccount();
                break;
