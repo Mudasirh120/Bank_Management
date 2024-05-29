@@ -18,7 +18,8 @@ public class Menu {
         mchoice=scanner.nextInt();
         switch (mchoice){
             case 1 :
-
+               Account.displayAccount();
+               break;
         }
     }
 }

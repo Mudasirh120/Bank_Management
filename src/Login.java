@@ -9,11 +9,11 @@ public class Login {
     private static String storedPassword;
     private static String recoverykey;
     private static int pin;
-    public static void setUsername(String username) {
-        Login.username = username;
+    public static void setStoredUsername(String username) {
+        Login.storedUsername = username;
     }
-    public static String getUsername() {
-        return username;
+    public static String getStoredUsername() {
+        return storedUsername;
     }
     public static String getRecoverykey() {
         return recoverykey;
@@ -33,7 +33,9 @@ public class Login {
     public static void setStoredPassword(String storedPassword) {
         Login.storedPassword = storedPassword;
     }
-
+    public static String getAccountNumber() {
+        return accountNumber;
+    }
     private static boolean loggedIn = false;
     private static int choice;
     public static void register(){
@@ -136,4 +138,5 @@ public class Login {
             System.out.println("\n\n\t\t\t\t\tInvalid choice. Please choose 1 or 2.");
             break;        }
         }
-    }
+
+}
