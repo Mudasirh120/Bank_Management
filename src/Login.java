@@ -136,6 +136,7 @@ public class Login {
         System.out.println("\n\n\t\t\t\t\t\t\t   Welcome to IMF \n\n");
         System.out.println("\n\n\n\t\t\t\t\t\t\t\t1. Login");
         System.out.println("\t\t\t\t\t\t\t\t2. Register");
+        System.out.println("\t\t\t\t\t\t\t\t3. Exit");
         System.out.println("\t\t\t\t\t\t\t      Choose an option.");
         choice = scanner.nextInt();
         switch (choice) {
@@ -145,8 +146,11 @@ public class Login {
         case 2:
             register();
             break;
+        case 3:
+            break;
         default:
-            System.out.println("\n\n\t\t\t\t\tInvalid choice. Please choose 1 or 2.");
+            System.out.println("\n\n\t\t\t\t\tInvalid choice. Please choose 1 or 2 or 3.");
+            loginPage();
             break;        }
         }
 

@@ -21,7 +21,11 @@ public class Menu {
                Account.displayAccount();
                break;
             case 2 :
-
+              ResetPin.changePin();
+              break;
+            case 8 :
+              Login.loginPage();
+              break;
         }
     }
 }
