@@ -1,14 +1,15 @@
 import java.util.Scanner;
 import java.util.Random;
+import java.lang.*;
 public class Login {
     private static String accountNumber;
     private static String branchCode="0246";
     private static String username;
     private static String password;
-    private static String storedUsername;
-    private static String storedPassword;
+    private static String storedUsername="Mudasir";
+    private static String storedPassword="Mudasir";
     private static String recoverykey;
-    private static int pin;
+    private static String pin;
     public static void setStoredUsername(String username) {
         Login.storedUsername = username;
     }
@@ -21,10 +22,10 @@ public class Login {
     public static void setRecoverykey(String recoverykey) {
         Login.recoverykey = recoverykey;
     }
-    public static int getPin() {
+    public static String getPin() {
         return pin;
     }
-    public static void setPin(int pin) {
+    public static void setPin(String pin) {
         Login.pin = pin;
     }
     public static String getStoredPassword() {
@@ -48,7 +49,16 @@ public class Login {
         System.out.print("\t\t\t\t\t\t\t  Recovery key : ");
         recoverykey= scanner.nextLine();
         System.out.print("\t\t\t\t\t\t\t  Transaction Pin: ");
-        pin = scanner.nextInt();
+        pin = scanner.nextLine();
+        while (true) {
+            System.out.print("\t\t\t\t\t\t\t  Transaction Pin (4 digits): ");
+            pin = scanner.nextLine();
+            if (pin.matches("\\d{4}")) { // Check if pin contains exactly 4 digits
+                break;
+            } else {
+                System.out.println("Invalid input. Please enter exactly 4 digits for the Transaction Pin.");
+            }
+        }
         long acNumber= rand.nextLong(100000000);
         accountNumber=branchCode+acNumber;
         System.out.println("\n\n\t\t\t\t\t\t\t Successful Signup.");

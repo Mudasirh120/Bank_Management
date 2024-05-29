@@ -49,17 +49,23 @@ class Account{
             case 1:
                 System.out.println("Enter a New Name.");
                 storesUsername=scanner.nextLine();
+                scanner.nextLine();
                 Login.setStoredUsername(storesUsername);
+                Menu.displayMenu();
                 break;
             case 2:
                 System.out.println("Enter a New Password.");
                 storesPassword=scanner.nextLine();
+                scanner.nextLine();
                 Login.setStoredPassword(storesPassword);
+                Menu.displayMenu();
                 break;
             case 3:
                 System.out.println("Enter a New Recovery Key.");
                 recoverkey=scanner.nextLine();
+                scanner.nextLine();
                 Login.setRecoverykey(recoverkey);
+                Menu.displayMenu();
                 break;
         }
     }

@@ -20,6 +20,8 @@ public class Menu {
             case 1 :
                Account.displayAccount();
                break;
+            case 2 :
+
         }
     }
 }
