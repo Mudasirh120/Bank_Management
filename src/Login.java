@@ -64,6 +64,7 @@ public class Login {
             if (username.equals(storedUsername) && password.equals(storedPassword)) {
                 loggedIn = true;
                 System.out.println("Login successful!");
+                Menu.displayMenu();
             }
             else if (username.equals(storedUsername) && !password.equals(storedPassword)) {
                 System.out.println("\n\n\t\t\t\t\tIncorrect password.");
