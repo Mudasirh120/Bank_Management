@@ -27,6 +27,7 @@ class Account{
                 System.out.println("Recovery Key : " + Login.getRecoverykey());
                 System.out.println("Transaction Pin : " + Login.getPin());
                 System.out.println("Interest Rate "+Account.interest);
+                System.out.println("Transaction Limit"+BankAccounts.depositLimit);
                 System.out.println("Transaction Limit"+Account.transcationlimit);
                 System.out.println("press C to change details and Y to go back");
                 c=scanner.nextLine().charAt(0);

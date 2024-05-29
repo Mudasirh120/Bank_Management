@@ -130,6 +130,7 @@ public class Login {
                 }
             }
         }
+        AccountType.AccountType();
     }
     public static void loginPage() {
         Scanner scanner = new Scanner(System.in);
